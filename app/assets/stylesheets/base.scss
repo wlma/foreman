@@ -2,13 +2,49 @@ html {
   height: 100%;
   width: 100%;
   display: table;
+}
+
+#rails-app-content {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   overflow: auto;
+  height: calc(100% - 70px);
+  margin-left: 250px;
+  .rails-table-toolbar {
+    padding-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &.pf-c-page {
+    display: block;
+    grid-template-columns: unset;
+    grid-template-areas: unset;
+  }
+
 }
 
 body {
+  position: absolute; // needed for firefox 100% height bug
+  overflow: auto;
   height: 100%;
   width: 100%;
-  display: table-cell;
+}
+
+#react-app-root {
+  height: 100%;
+  width: 100%;
+  .pf-c-page {
+    // pf grid rule stops at @media (min-width: 1200px)
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-areas:
+      'header header'
+      'nav main';
+  }
 }
 
 .base li {
@@ -144,10 +180,13 @@ select {
 }
 
 .title_filter {
-  padding-right: 8px;
+  flex-grow: 1;
+  padding-left: 0;
 }
 
 #title_action {
+  flex-grow: 1;
+  display: flex;
   padding-left: 8px;
   padding-bottom: 12px;
 }
@@ -621,6 +660,7 @@ code.transparent {
   max-width: 175px;
 }
 
-td .dropdown-menu > li > a.disabled:hover, td .dropdown-menu > li > a.disabled:focus {
+td .dropdown-menu > li > a.disabled:hover,
+td .dropdown-menu > li > a.disabled:focus {
   cursor: pointer;
 }

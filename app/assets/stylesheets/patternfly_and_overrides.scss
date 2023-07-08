@@ -8,10 +8,6 @@
   float: left;
 }
 
-#main {
-  padding: 0 40px;
-}
-
 fieldset > div.col-md-1 {
   padding-left: 0;
 }
@@ -111,13 +107,6 @@ a {
   }
 }
 
-.navbar-brand-icon {
-  width: 44px;
-  height: 34px;
-  margin: 0 5px 0 0 !important;
-  max-width: none;
-}
-
 .tab-content {
   min-height: 420px;
 }
@@ -143,6 +132,7 @@ a {
 .btn-toolbar {
   display: flex;
   align-items: center;
+  margin-left: auto;
 
   #toolbar-spinner {
     margin-right: 5px;
@@ -357,17 +347,4 @@ span.btn-action a {
 
 span.btn-action.btn-primary a {
   color: #fff;
-}
-
-.vertical-sub-header-pf {
-  line-height: 25px;
-  font-size: 12px;
-  margin-left: 20px;
-  font-weight: bold;
-  color: #fff;
-  padding: 20px 0 2px 5px;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
